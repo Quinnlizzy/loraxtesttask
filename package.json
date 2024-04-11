@@ -3,5 +3,16 @@
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "sqlite3": "^5.1.7"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "loraxtesttask",
+  "description": "Test task",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
