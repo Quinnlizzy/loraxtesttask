@@ -23,29 +23,29 @@ document.getElementById('registrationForm').addEventListener('submit', function(
   }
     
     // Submit form data to server
-fetch('http://your-server-url/register', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password
-    })
-  })
-  .then(response => response.json())
-  .then(data => {
-    if (data.success) {
-      // Redirect to login page
-      window.location.href = '/login';
-    } else {
-      // Show error message
-      alert(data.message);
-    }
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+    fetch('http://localhost:3000/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          password: password
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          // Redirect to login page
+          window.location.href = '/login';
+        } else {
+          // Show error message
+          alert(data.message);
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
 });
