@@ -1,0 +1,8 @@
+/* CSS */
+form {
+    display: flex;
+    flex-direction: column;
+  }
+  input, button {
+    margin: 10px 0;
+  }
