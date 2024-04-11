@@ -4,7 +4,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     
     // Get form data
     let firstName = document.getElementById('firstName').value;
-    var lastName = document.getElementById('lastName').value;
+    let lastName = document.getElementById('lastName').value;
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     
