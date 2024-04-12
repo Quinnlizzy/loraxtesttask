@@ -1,19 +1,15 @@
-document.getElementById('registrationForm').addEventListener('submit', function(event) {
+document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
   
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
   
-    fetch('http://localhost:3000/register', {
+    fetch('http://localhost:3000/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        firstName: firstName,
-        lastName: lastName,
         email: email,
         password: password,
       }),
@@ -21,8 +17,8 @@ document.getElementById('registrationForm').addEventListener('submit', function(
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          // Redirect to login page
-          window.location.href = 'login.html';
+          // Redirect to some page after successful login
+          window.location.href = 'welcome.html';
         } else {
           document.getElementById('messageBox').innerText = data.message;
         }
