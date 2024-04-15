@@ -5,6 +5,7 @@ const app = require('./server');
 // Describe test suite for the POST /register route
 describe('POST /register', () => {
   // Test case 1: Reg user with valid data
+  // NOTE YOU WILL NEED TO DELETE THE NEW USER THAT THIS TEST WILL INPUT TO THE JSON FILE OR CHANGE THE DETAILS
   it('TC1: should register a user with valid data', async () => {
     // Send a POST req to /reg valid user
     const res = await request(app)
