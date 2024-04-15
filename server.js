@@ -110,7 +110,7 @@ app.post('/register', (req, res) => {
       return;
     }
 
-    // Add new user to users array
+    // Add new user to users array 
     users.push({ firstName, lastName, email, password });
 
   
@@ -132,5 +132,5 @@ app.post('/register', (req, res) => {
   // Start the server on port 3000
   app.listen(3000, () => console.log('Server is running on http://localhost:3000'));
   
-  // Export the app (useful for testing)
+  // Export the app 
   module.exports = app;
